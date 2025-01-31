@@ -47,12 +47,11 @@
   <!-- Entry bib key -->
   <div id="{{ entry.key }}" class="{% if site.enable_publication_thumbnails %}col-sm-8{% else %}col-sm-10{% endif %}">
     <!-- Title -->
-    <div class="title">{{ entry.title }}</div>
     <div class="title">
-    {% if entry.new %}
-    <span style="color: red; font-weight: bold;">*New* </span>
-    {% endif %}
     {{ entry.title }}
+    {% if entry.new %}
+    <span style="color: #DA4344; font-weight: bold;"> *New*</span>
+    {% endif %}
     </div>
 
 
@@ -186,6 +185,9 @@
     {% capture periodical %}{{ entrytype }}{% if entrytype_text != "" and entryyear != "" %}, {% endif %}{{ entrymonth }}{{ entryyear }}{% endcapture %}
     <div class="periodical">
       {{ periodical | strip }}
+      {% if entry.oral %}
+        <span style="color: #DA4344; font-weight: bold;"> Oral Presentation</span>
+      {% endif %}
     </div>
     <div class="periodical">
       {{ entry.note | strip }}
