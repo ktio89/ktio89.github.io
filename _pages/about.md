@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Welcome to my Iunniverse (this site is under construction).
+# subtitle: Welcome to my Iunniverse (this site is under construction).
 
 profile:
   align: right
