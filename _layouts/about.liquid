@@ -42,25 +42,25 @@ layout: default
 
     <!-- News -->
     {% if page.news and site.announcements.enabled %}
-      <h2>
+      <h3>
         <a href="{{ '/news/' | relative_url }}" style="color: inherit">News</a>
-      </h2>
+      </h3>
       {% include news.liquid limit=true %}
     {% endif %}
 
     <!-- Latest posts -->
     {% if site.latest_posts.enabled %}
-      <h2>
+      <h3>
         <a href="{{ '/blog/' | relative_url }}" style="color: inherit">Latest Posts</a>
-      </h2>
+      </h3>
       {% include latest_posts.liquid %}
     {% endif %}
 
     <!-- Selected papers -->
     {% if page.selected_papers %}
-      <h2>
+      <h3>
         <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Featured Publications</a>
-      </h2>  
+      </h3>  
       * = Co-first authorship. The full publication list can be found
       <a href="{{ '/publications/' | relative_url }}" style="color: #0076df">here</a>.
       {% include selected_papers.liquid %}
