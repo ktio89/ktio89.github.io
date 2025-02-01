@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Ph.D. Student in AI, Yonsei University
+subtitle: Welcome to my iunniverse
 
 profile:
   align: right
