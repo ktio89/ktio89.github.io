@@ -185,6 +185,9 @@
     {% capture periodical %}{{ entrytype }}{% if entrytype_text != "" and entryyear != "" %} {% endif %}{{ entrymonth }}{{ entryyear }}{% endcapture %}
     <div class="periodical">
       {{ periodical | strip }}
+      {% if entry.findings %}
+        <em><b>(Findings)</b></em>
+      {% endif %}
       {% if entry.note %}
         ({{ entry.note | strip }})
       {% endif %}
@@ -192,7 +195,7 @@
         <span style="background-color: #FBF4FA;">Oral Presentation</span>
       {% endif %}
       {% if entry.award %}
-        <span style="background-color: #DFE2FF;">{{entry.award}}</span>
+        <span style="background-color: #C6D7FF;">{{entry.award}}</span>
       {% endif %}
     </div>
 
