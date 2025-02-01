@@ -60,10 +60,8 @@ layout: default
     {% if page.selected_papers %}
       <h2>
         <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Featured Publications</a>
-      </h2>
-      <h6>
-        * = Co-first authorship.
-      </h6>
+      </h2>  
+      <br>* = Co-first authorship.
       {% include selected_papers.liquid %}
     {% endif %}
 
