@@ -17,4 +17,4 @@ social: false # includes social icons at the bottom of the page
 ---
 This new website is `under construction`. Please visit my [old website](https://ktio89.weebly.com/).
 
-[[google scholar]](https://scholar.google.com/citations?user=xF6qLHsAAAAJ&hl=en) [[X(twitter)]](https://x.com/kaiiunnong) [[linkedin]](https://www.linkedin.com/in/ktio89/)
+[[google scholar]](https://scholar.google.com/citations?user=xF6qLHsAAAAJ&hl=en)  [[twitter/x]](https://x.com/kaiiunnong)  [[linkedin]](https://www.linkedin.com/in/ktio89/)
