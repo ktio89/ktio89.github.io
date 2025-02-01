@@ -168,6 +168,9 @@
     {% if entry.month %}
       {% capture entrymonth %}{{ " " }}{{ entry.month | capitalize }}{% endcapture %}
     {% endif %}
+    {% if entry.year %}
+      {% capture entryyear %}{{ " " }}<em><b>{{ entry.year }}</b></em>{% endcapture %}
+    {% endif %}
     {% if entry.location %}
       {% capture entrytype %}{{ entrytype }}{{ ", " }}{{ entry.location }}{% endcapture %}
     {% endif -%}
@@ -179,16 +182,17 @@
       {% include hook/bib.liquid %}
     {% endif %}
     {% assign entrytype_text = entrytype | strip_html | strip %}
-    {% capture periodical %}{{ entrytype }}{% if entrytype_text != "" and entryyear != "" %}, {% endif %}{{ entrymonth }}{{ entryyear }}{% endcapture %}
+    {% capture periodical %}{{ entrytype }}{% if entrytype_text != "" and entryyear != "" %} {% endif %}{{ entrymonth }}{{ entryyear }}{% endcapture %}
+    <div class="periodical">
+      {{ entry.note | strip }}
+    </div>    
     <div class="periodical">
       {{ periodical | strip }}
       {% if entry.oral %}
         <span style="background-color: #FBF4FA;"> Oral Presentation</span>
       {% endif %}
     </div>
-    <div class="periodical">
-      {{ entry.note | strip }}
-    </div>
+
 
     <!-- Links/Buttons -->
     <div class="links">
