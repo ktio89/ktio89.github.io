@@ -19,4 +19,17 @@ social: false # includes social icons at the bottom of the page
 
 This page is under construction. I'm migrating contents from [my old website](https://ktio89.weebly.com/).
 
-`I'll be attending CHI (Yokohama, Japan) and NAACL (Albuquerque, USA)!`
+Hello. I am Kai (翁子洋), from Taipei, Taiwan. I am a `AI researcher` currently pursing a Ph.D. under the supervision of prof. [Jinyoung Yeo](https://jinyeo.weebly.com/). ​​Before AI & CS, I'd studied `mechanical engineering` at [National Taiwan University](https://www.ntu.edu.tw/english/about/about.html) (B05) and [Yonsei University](https://www.yonsei.ac.kr/en_sc/index.jsp)
+
+I've always been so enthralled by how we can draw inspiration from both `societal challenges` we're facing and `human behaviours` (e.g., cognitive theory) to drive the advancement of AI techniques. Consequently, my research interest lies in the intersection of:
+* Language Agents
+* Human-centred AI
+* AI for Science and Social Good (e.g., healthcare)
+* Dialogue / Interactive Systems
+
+I wish to make positive impact on those around me and avoid living a fruitless life.
+Fyi, I am a polyglot and a gym rat. Contact: ​ktio89 [at] yonsei [dot] ac [dot] kr
+
+```
+I'll be attending CHI (Yokohama, Japan) and NAACL (Albuquerque, USA)!
+```
