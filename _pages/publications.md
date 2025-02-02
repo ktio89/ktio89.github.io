@@ -15,7 +15,7 @@ nav_order: 2
 
 {% include bib_search.liquid %}
 
-<small>* = Co-first authorship. The full publication list is</small>
+<small>The asterisk (*) indicates co-first authorship.</small>
 
 <div class="publications">
 
