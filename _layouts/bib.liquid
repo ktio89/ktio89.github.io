@@ -93,14 +93,14 @@
           <em>
             {% if author.first == "Kai Tzu-iunn" %}
               {% comment %} <u>{{- author.first }} {{ author_last_html -}}</u> {% endcomment %}
-              <u>{{- author.first }} {{ author.last | regex_replace: '[*∗†‡§¶‖&^]', '' }}</u><sup style="color: #0076df; font-weight: bolder">*</sup>
+              <u>{{- author.first }} {{ author.last | regex_replace: '[*∗†‡§¶‖&^]', '' }}</u><sup style="color: #0076df; font-weight: bolder">\1</sup>
             {% else %}
               {{- author.first }} {{ author_last_html -}}
             {% endif %}
           </em>
         {%- else -%}
           {% if author.first == "Kai Tzu-iunn" %}
-            <u>{{- author.first }} {{ author.last | regex_replace: '[*∗†‡§¶‖&^]', '' }}</u><sup style="color: #0076df; font-weight: bolder">*</sup>
+            <u>{{- author.first }} {{ author.last | regex_replace: '[*∗†‡§¶‖&^]', '' }}</u><sup style="color: #0076df; font-weight: bolder">\1</sup>
             {% comment %} <u>{{- author.first }} {{ author_last_html -}}</u> {% endcomment %}
           {% else %}
             {{- author.first }} {{ author_last_html -}}
