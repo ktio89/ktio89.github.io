@@ -61,10 +61,9 @@ layout: default
       <h3>
         <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Featured Publications</a>
       </h3>  
-      * = Co-first authorship. The full publication list can be found
-      <a href="{{ '/publications/' | relative_url }}" style="color: #0076df">here</a>.
+      <small>* = Co-first authorship. The full publication list can be found</small>
+      <small><a href="{{ '/publications/' | relative_url }}" style="color: #0076df">here</a></small>.
       {% include selected_papers.liquid %}
-      <br>
     {% endif %}
     
     <!-- Experience -->  
@@ -112,7 +111,7 @@ layout: default
     <!-- activity -->  
     <div class="Activities">
       <h3>Activities</h3>
-      <a>Teaching, talks, etc.</a>
+      <a><small>Teaching, talks, etc.</small></a>
       <p>
         <b>Program reviewer:</b>&nbsp;AAAI (2023, 2024, 2025), ACL (2023, 2024, 2025), EMNLP (2023, 2024), ​EACL (2024)
       </p>

@@ -8,7 +8,7 @@ profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
-  more_info: >
+  more_info: ​ktio89 [at] yonsei [dot] ac [dot] kr
     
 
 # news: true # includes a list of news items
@@ -17,9 +17,7 @@ social: false # includes social icons at the bottom of the page
 ---
 [[google scholar]](https://scholar.google.com/citations?user=xF6qLHsAAAAJ&hl=en)  [[x]](https://x.com/kaiiunnong)  [[linkedin]](https://www.linkedin.com/in/ktio89/)
 
-This page is under construction. I'm migrating contents from [my old website](https://ktio89.weebly.com/).
-
-Hello. I am Kai (翁子洋), from Taipei, Taiwan. I am a `AI researcher` currently pursing a Ph.D. under the supervision of prof. [Jinyoung Yeo](https://jinyeo.weebly.com/). ​​Before AI & CS, I'd studied `mechanical engineering` at [National Taiwan University](https://www.ntu.edu.tw/english/about/about.html) (B05) and [Yonsei University](https://www.yonsei.ac.kr/en_sc/index.jsp)
+Hello. I am Kai (翁子洋), from Taipei, Taiwan. I am a `AI researcher` currently pursing a Ph.D. under the supervision of prof. [Jinyoung Yeo](https://jinyeo.weebly.com/). ​​Before AI & CS, I'd studied `mechanical engineering` at [National Taiwan University](https://www.ntu.edu.tw/english/about/about.html) (B05) and [Yonsei University](https://www.yonsei.ac.kr/en_sc/index.jsp).
 
 I've always been so enthralled by how we can draw inspiration from both `societal challenges` we're facing and `human behaviours` (e.g., cognitive theory) to drive the advancement of AI techniques. Consequently, my research interest lies in the intersection of:
 * Language Agents
@@ -27,9 +25,4 @@ I've always been so enthralled by how we can draw inspiration from both `societa
 * AI for Science and Social Good (e.g., healthcare)
 * Dialogue / Interactive Systems
 
-I wish to make positive impact on those around me and avoid living a fruitless life.
-Fyi, I am a polyglot and a gym rat. Contact: ​ktio89 [at] yonsei [dot] ac [dot] kr
-
-```
-I'll be attending CHI (Yokohama, Japan) and NAACL (Albuquerque, USA)!
-```
+> I'll be attending CHI (Yokohama, Japan) and NAACL (Albuquerque, USA)!
