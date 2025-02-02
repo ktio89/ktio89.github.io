@@ -11,7 +11,11 @@ nav_order: 2
 
 <!-- Bibsearch Feature -->
 
+
+
 {% include bib_search.liquid %}
+
+<small>* = Co-first authorship. The full publication list is</small>
 
 <div class="publications">
 
