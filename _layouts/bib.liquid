@@ -88,7 +88,8 @@
           {%- if forloop.last and author_array_limit == author_array_size %}and&nbsp;{% endif -%}
         {% endif %}
         {%- if author_is_self -%}
-            <u>{{- author.first }} {{ author_last_html -}}</u>
+            {% comment %} <u>{{- author.first }} {{ author_last_html -}}</u> {% endcomment %}
+            <u>Kai Tzu-iunn Ong</u><sup style="color: #0076df; font-weight: bolder">\1</sup>
         {%- else -%}
             {{- author.first }} {{ author_last_html -}}
         {%- endif -%}
