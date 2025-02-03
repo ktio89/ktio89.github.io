@@ -41,8 +41,7 @@ layout: default
     <div class="clearfix">{{ content }}</div>
 
     <!-- News -->
-    {% comment %} {% if page.news and site.announcements.enabled %} {% endcomment %}
-    {% if site.announcements.enabled %}
+    {% if page.news and site.announcements.enabled %}
       <h3>
         <a href="{{ '/news/' | relative_url }}" style="color: inherit">News</a>
       </h3>
