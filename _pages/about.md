@@ -21,7 +21,7 @@ Hello. I am Kai (翁子洋), from Taipei, Taiwan. I am an `AI researcher`, curre
 I've always been so enthralled by how we can draw inspiration from both `societal challenges` we're facing and `human behaviours` (e.g., cognitive theory) to drive the advancement of AI. Consequently, my research interest lies in the intersection of:
 - Language Agents[<sup>1</sup>](https://arxiv.org/abs/2410.13232)
 - Human-centred AI 
-- AI for Science and Social Good (e.g., healthcare)[<sup>2<,sup>](https://arxiv.org/abs/2312.07399)<sup>,</sup>[3](https://iovs.arvojournals.org/article.aspx?articleid=2793342)
-- Dialogue / Interactive Systems[<sup>4<,sup>](https://arxiv.org/abs/2406.10996)
+- AI for Science and Social Good (e.g., healthcare)[<sup>2</sup>](https://arxiv.org/abs/2312.07399)<sup>,</sup>[<sup>3</sup>](https://iovs.arvojournals.org/article.aspx?articleid=2793342)
+- Dialogue / Interactive Systems[<sup>4</sup>](https://arxiv.org/abs/2406.10996)
 
 `I'll be attending CHI (Yokohama, JP) & NAACL (Albuquerque, USA)!`
