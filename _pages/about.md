@@ -22,6 +22,6 @@ I've always been so enthralled by how we can draw inspiration from both `societa
 - Language Agents[<sup>1</sup>](https://arxiv.org/abs/2410.13232)
 - Human-centred AI 
 - AI for Science and Social Good (e.g., healthcare)[<sup>2<,sup>](https://arxiv.org/abs/2312.07399)<sup>,</sup>[3](https://iovs.arvojournals.org/article.aspx?articleid=2793342)
-- Dialogue / Interactive Systems[<sup>4<,sup>](https://arxiv.org/abs/2410.13232)
+- Dialogue / Interactive Systems[<sup>4<,sup>](https://arxiv.org/abs/2406.10996)
 
 `I'll be attending CHI (Yokohama, JP) & NAACL (Albuquerque, USA)!`
