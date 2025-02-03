@@ -19,9 +19,9 @@ social: false # includes social icons at the bottom of the page
 
 Hello. I am Kai (翁子洋), from Taipei, Taiwan. I am an `AI researcher`, currently pursing a Ph.D. under the supervision of prof. [Jinyoung Yeo](https://jinyeo.weebly.com/). ​​Before AI & CS, I'd studied `mechanical engineering` at [National Taiwan University](https://www.ntu.edu.tw/english/about/about.html) (B05) and [Yonsei University](https://www.yonsei.ac.kr/en_sc/index.jsp).
 I've always been so enthralled by how we can draw inspiration from both `societal challenges` we're facing and `human behaviours` (e.g., cognitive theory) to drive the advancement of AI. Consequently, my research interest lies in the intersection of:
-- Language Agents
-- Human-centred AI
-- AI for Science and Social Good (e.g., healthcare)
-- Dialogue / Interactive Systems
+- Language Agents [[1]](https://arxiv.org/abs/2410.13232)
+- Human-centred AI 
+- AI for Science and Social Good (e.g., healthcare) [[2]](https://arxiv.org/abs/2312.07399) [[3]](https://iovs.arvojournals.org/article.aspx?articleid=2793342)
+- Dialogue / Interactive Systems [[4]](https://arxiv.org/abs/2410.13232)
 
 `I'll be attending CHI (Yokohama, JP) & NAACL (Albuquerque, USA)!`
