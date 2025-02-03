@@ -24,4 +24,4 @@ I've always been so enthralled by how we can draw inspiration from both `societa
 - AI for Science and Social Good (e.g., healthcare)
 - Dialogue / Interactive Systems
 
-`I'll be attending CHI (Yokohama, Japan) and NAACL (Albuquerque, USA)!`
+`I'll be attending CHI (Yokohama, JP) & NAACL (Albuquerque, USA)!`
