@@ -13,10 +13,7 @@ images:
 
 <!-- Bibsearch Feature -->
 
-
-
-{% include bib_search.liquid %}
-
+<!-- image sliders -->
 <swiper-container style="max-width: 240px; margin: 0 auto;" keyboard="true" navigation="true" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true">
   <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/9.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
   <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/7.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
