@@ -24,4 +24,4 @@ I've always been enthralled by how we can draw inspiration from both `societal c
 - Human-centred AI 
 - AI for Science and Social Good (e.g., healthcare)[<sup>3</sup>](https://arxiv.org/abs/2312.07399)<sup>,</sup>[<sup>4</sup>](https://iovs.arvojournals.org/article.aspx?articleid=2793342)
 
-`Contact me for collaboration:)`
+`Contact me for collaboration:) Soon, I’ll be serving my military service in the Taiwanese army (2025 Q3 - 2026 Q1).`
