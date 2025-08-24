@@ -2,7 +2,7 @@
 layout: page
 permalink: /publications/
 title: publications
-description: llms_for_healthcare, dialogue_agents, reasoning_of_llms, disease_diagnosis, code_generation, digital_agents, personalised_agents. 
+description: ICLR: 1, ACL: , EMNLP: 4, NAACL: 1, AAAI: 1, EACL: 1, IEEE Series: 1, Q1 Journal: 3; First and Co-first Author: 5. 
 nav: true
 nav_order: 2
 images:
