@@ -2,7 +2,7 @@
 layout: page
 permalink: /publications/
 title: publications
-description: ICLR * 1, EMNLP * 4, NAACL * 1, AAAI * 1, EACL * 1, IEEE Series * 1, Q1 Journal * 3; First and Co-first Author * 5. 
+description: 
 nav: true
 nav_order: 2
 images:
@@ -25,6 +25,8 @@ images:
   <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/evidence.jpg" class="img-fluid align-items-center" %}</swiper-slide>
 </swiper-container>
 
+<small>ICLR * 1, EMNLP * 4, NAACL * 1, AAAI * 1, EACL * 1, IEEE Series * 1, Q1 Journal * 3.</small>
+<small>First and Co-first Author * 5.</small>
 <small>The asterisk (*) indicates co-first authorship.</small>
 
 
