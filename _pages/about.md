@@ -15,7 +15,7 @@ profile:
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
 ---
-[[google scholar]](https://scholar.google.com/citations?user=xF6qLHsAAAAJ&hl=en)  [[x]](https://x.com/kaiiunnong)  [[linkedin]](https://www.linkedin.com/in/ktio89/) [[​ktio89(at)yonsei(dot)ac(dot)kr]](https://ktio89.github.io/)
+[[google scholar]](https://scholar.google.com/citations?user=xF6qLHsAAAAJ&hl=en)  [[x]](https://x.com/kaiiunnong)  [[linkedin]]() [[​ktio89(at)yonsei(dot)ac(dot)kr]](https://ktio89.github.io/)
 
 Hello. I am Kai, from Taiwan. I am a `Ph.D. candidate in AI` (advised by prof. [Jinyoung Yeo](https://jinyeo.weebly.com/)). ​​Before AI & CS, I'd studied mechanical engineering at National Taiwan University (B05) and Yonsei University.
 I am enthralled by how we can draw inspiration from both `societal challenges we're facing` and `human behaviours` (e.g., cognitive theory) to drive the advancement of AI. Consequently, my research interest lies in the intersection of:
