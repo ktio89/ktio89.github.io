@@ -24,4 +24,4 @@ I am enthralled by how we can draw inspiration from both `societal challenges we
 - Human-centred AI 
 - AI for Science and Social Good (e.g., healthcare)[<sup>3</sup>](https://arxiv.org/abs/2312.07399)<sup>,</sup>[<sup>4</sup>](https://iovs.arvojournals.org/article.aspx?articleid=2793342)
 
-`I’ll be serving in the Taiwanese army from 2025 Q3 to 2026 Q1.`
+`I am currently serving in the Taiwan army (- 2026 Q1) as a rifleman and signaller (radio).`
