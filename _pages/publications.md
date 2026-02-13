@@ -2,7 +2,6 @@
 layout: page
 permalink: /publications/
 title: publications
-description: ICLR * 1, EMNLP * 4, NAACL * 1, AAAI * 1, EACL * 1, IEEE Series * 1, Q1 Journal * 3.
 nav: true
 nav_order: 2
 images:
