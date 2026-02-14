@@ -19,9 +19,8 @@ social: false # includes social icons at the bottom of the page
 
 Hello. I am Kai, from Taiwan. I am a `Ph.D. candidate in AI` (advised by prof. [Jinyoung Yeo](https://jinyeo.weebly.com/)). ​​Before AI & CS, I'd studied mechanical engineering at National Taiwan University (B05) and Yonsei University.
 I am enthralled by how we can draw inspiration from both `societal challenges we're facing` and `human behaviours` (e.g., cognitive theory) to drive the advancement of AI. Consequently, my research interest lies in the intersection of:
-- Dialogue / Interactive Systems[<sup>1</sup>](https://arxiv.org/abs/2406.10996)
-- Language Agents[<sup>2</sup>](https://arxiv.org/abs/2410.13232)
-- Human-centred AI 
+- Dialogue Agents / Interactive Systems[<sup>1</sup>](https://arxiv.org/abs/2406.10996)
+- Human-centred AI[<sup>2</sup>](https://www.sciencedirect.com/science/article/pii/S1386505626000821?via%3Dihub&__cf_chl_tk=OXy_s.c6ymf1ilw3zB9RV4ax5rksZnbRkZH40yu8zZQ-1771040295-1.0.1.1-1q0UNjIolWXzJ9RAWvaN.yKhiHEJJn7MPJXNxE0siE4) 
 - AI for Science and Social Good (e.g., healthcare)[<sup>3</sup>](https://arxiv.org/abs/2312.07399)<sup>,</sup>[<sup>4</sup>](https://iovs.arvojournals.org/article.aspx?articleid=2793342)
 
 `As a man thinketh, so is he.`
