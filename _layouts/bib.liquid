@@ -174,7 +174,7 @@
       {% include hook/bib.liquid %}
     {% endif %}
     {% assign entrytype_text = entrytype | strip_html | strip %}
-    {% capture periodical %}{{ entrytype }}{% if entrytype_text != "" and entryyear != "" %} {% endif %}{{ entrymonth }}{{ entryyear }}{% endcapture %}
+    {% capture periodical %} {{ entrytype }}{% if entrytype_text != "" and entryyear != "" %} {% endif %}{{ entrymonth }}{{ entryyear }}{% endcapture %}
     <div class="periodical">
       {{ periodical | strip }}
       {% if entry.findings %}
@@ -186,8 +186,15 @@
       {% if entry.oral %}
         <span style="background-color: #FBF4FA;">&nbsp;Oral Presentation&nbsp;</span>
       {% endif %}
-      {% if entry.award %}
+      {% comment %} {% if entry.award %}
         <span style="background-color: #e6c0e1;">&nbsp;{{entry.award}}&nbsp;</span>
+      {% endif %} {% endcomment %}
+
+      {% if entry.award %}
+          <a href="{{ entry.award_url }}" 
+          target="_blank" 
+          style="background-color: #FBF4FA; text-decoration: none; color: inherit;">&nbsp;{{ entry.award }}&nbsp;
+          </a>
       {% endif %}
     </div>
 
