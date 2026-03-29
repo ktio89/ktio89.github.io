@@ -191,10 +191,17 @@
       {% endif %} {% endcomment %}
 
       {% if entry.award %}
-          <a href="{{ entry.award_url }}" 
-          target="_blank" 
-          style="background-color: #FBF4FA; text-decoration: none; color: inherit;">&nbsp;{{ entry.award }}&nbsp;
-          </a>
+        {% assign award_parts = entry.award | split: "__" %}
+        {% assign award_name = award_parts[0] | strip %}
+        {% assign award_url = award_parts[1] | strip %}
+        {% if award_url != "" %}
+              <a href="{{ award_url }}" target="_blank"
+              style="background-color: #e6c0e1; text-decoration: none; color: inherit;">
+              &nbsp;{{ award_name }}&nbsp;
+              </a>
+        {% else %}
+              <span style="background-color: #e6c0e1;">&nbsp;{{ award_name }}&nbsp;</span>
+        {% endif %}
       {% endif %}
     </div>
 
