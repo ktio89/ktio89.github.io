@@ -25,6 +25,8 @@ images:
   <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/evidence.jpg" class="img-fluid align-items-center" %}</swiper-slide>
 </swiper-container>
 
+ 
+
 <small>ICLR * 1, EMNLP * 4, NAACL * 1, AAAI * 1, EACL * 1, IEEE Series * 1, Medical Journal * 4.</small>
 
 <small>The asterisk (*) indicates co-first authorship.</small>
@@ -33,7 +35,7 @@ images:
 <script src="{{ '/assets/js/first-author-filter.js' | relative_url | bust_file_cache }}"></script>
 
 <p class="mb-3">
-  <code id="first-author-filter-toggle" role="button" tabindex="0" style="cursor: pointer; user-select: none;">Click to show only refereed "First- and Co-first Author Papers" (N = {{ site.first_author_refereed_count }})</code>
+  <code id="first-author-filter-toggle" role="button" tabindex="0" style="cursor: pointer; user-select: none;"><span style="font-weight: 350;">Click</span> to show only refereed "First- and Co-first Author Papers" (N = {{ site.first_author_refereed_count }})</code>
 </p>
 
 <div class="publications">
