@@ -1,1 +1,1 @@
-document.addEventListener("DOMContentLoaded",function(){const t=document.getElementById("typewriter-text");if(!t)return;const e=t.dataset.text||"";let n=0;const o=setInterval(function(){t.textContent=e.substring(0,n+1),++n===e.length&&clearInterval(o)},40)});
+document.addEventListener("DOMContentLoaded",function(){const t=document.getElementById("typewriter-text");if(!t)return;const e=t.dataset.text||"";let n=0;const o=setInterval(function(){t.textContent=e.substring(0,n+1),++n===e.length&&clearInterval(o)},20)});
