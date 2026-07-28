@@ -12,6 +12,7 @@ images:
 
 <!-- Bibsearch Feature -->
 
+{% comment %}
 <!-- image sliders -->
 <swiper-container style="max-width: 350px; margin: 0 auto;" keyboard="true" navigation="true" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true">
   <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/hac.jpg" class="img-fluid align-items-center" %}</swiper-slide>
@@ -24,13 +25,14 @@ images:
   <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/worldmodel.jpg" class="img-fluid align-items-center" %}</swiper-slide>
   <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/evidence.jpg" class="img-fluid align-items-center" %}</swiper-slide>
 </swiper-container>
+{% endcomment %}
 
  
 
  
 
 <div style="max-width: 700px; margin: 1.5rem auto 0;">
-  <h4 style="text-align: center; font-size: 16px; margin-bottom: 15px;">Publications by Year</h4>
+  <h4 style="text-align: center; font-size: 16px; margin-bottom: 15px;">Publication at Top Venues (C + Q1 J) by Years</h4>
   <div style="width: 100%; height: 260px; position: relative;">
     <canvas id="publications-by-year-chart"></canvas>
   </div>
@@ -43,6 +45,7 @@ images:
     if (!canvas) return;
 
     const yearlyStats = {{ site.publication_yearly_stats | jsonify }};
+    console.log("publication yearly stats:", yearlyStats);
     const years = Object.keys(yearlyStats);
     const totalData = years.map((year) => yearlyStats[year].total);
     const firstAuthorData = years.map((year) => yearlyStats[year].first_author);
@@ -52,19 +55,27 @@ images:
     const mutedColor = rootStyle.getPropertyValue("--global-text-color-light").trim();
 
     new Chart(canvas.getContext("2d"), {
-      type: "bar",
+      type: "line",
       data: {
         labels: years,
         datasets: [
           {
             label: "All Publications",
             data: totalData,
+            borderColor: mutedColor,
             backgroundColor: mutedColor,
+            fill: false,
+            tension: 0.1,
+            pointRadius: 4,
           },
           {
             label: "First-/Co-first Author Papers",
             data: firstAuthorData,
+            borderColor: themeColor,
             backgroundColor: themeColor,
+            fill: false,
+            tension: 0.1,
+            pointRadius: 4,
           },
         ],
       },
