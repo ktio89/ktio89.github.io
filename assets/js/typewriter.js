@@ -10,5 +10,5 @@ document.addEventListener("DOMContentLoaded", function () {
     if (++cursorPosition === text.length) {
       clearInterval(textAdder);
     }
-  }, 40);
+  }, 20);
 });
