@@ -181,10 +181,10 @@
         <em><b>(Findings)</b></em>
       {% endif %}
       {% if entry.oral %}
-        <span style="background-color: #FBF4FB; color: #F5596E; font-weight: 600;">&nbsp;Oral Presentation&nbsp;</span>
+        <span style="background-color: #FBF4FB; color: #F5596E; font-weight: 500;">&nbsp;Oral Presentation&nbsp;</span>
       {% endif %}
       {% if entry.note %}
-        <span style="font-weight: 600;">({{ entry.note | strip }})</span>
+        <span style="font-weight: 500;">({{ entry.note | strip }})</span>
       {% endif %}
       {% comment %} {% if entry.award %}
         <span style="background-color: #e6c0e1;">&nbsp;{{entry.award}}&nbsp;</span>
@@ -196,11 +196,11 @@
         {% assign award_url = award_parts[1] | strip %}
         {% if award_url != "" %}
               <a href="{{ award_url }}" target="_blank"
-              style="background-color: #FBF4FB; text-decoration: none; color: #F5596E; font-weight: 600;">
+              style="background-color: #FBF4FB; text-decoration: none; color: #F5596E; font-weight: 500;">
               &nbsp;{{ award_name }}&nbsp;
               </a>
         {% else %}
-              <span style="background-color: #FBF4FB; color: #F5596E; font-weight: 600;">&nbsp;{{ award_name }}&nbsp;</span>
+              <span style="background-color: #FBF4FB; color: #F5596E; font-weight: 500;">&nbsp;{{ award_name }}&nbsp;</span>
         {% endif %}
       {% endif %}
     </div>
