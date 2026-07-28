@@ -27,17 +27,14 @@ images:
 
 <small>ICLR * 1, EMNLP * 4, NAACL * 1, AAAI * 1, EACL * 1, IEEE Series * 1, Medical Journal * 4.</small>
 
-<small>First and co-first-author papers (refereed) * 6.</small>
-
 <small>The asterisk (*) indicates co-first authorship.</small>
  
 
 <script src="{{ '/assets/js/first-author-filter.js' | relative_url | bust_file_cache }}"></script>
 
-<div class="form-check mb-3">
-  <input type="checkbox" id="first-author-filter" class="form-check-input">
-  <label class="form-check-label" for="first-author-filter">Only show first/co-first author papers</label>
-</div>
+<p class="mb-3">
+  <code id="first-author-filter-toggle" role="button" tabindex="0" style="cursor: pointer; user-select: none;">Click to show only refereed "First- and Co-first Author Papers" (N = {{ site.first_author_refereed_count }})</code>
+</p>
 
 <div class="publications">
 

@@ -8,7 +8,12 @@
     {% endif %}
   {% endif %}
 {% endfor %}
-<div class="row" data-first-author="{{ entry_is_first_or_cofirst }}">
+{% assign entry_journal_downcase = entry.journal | downcase %}
+{% assign entry_is_refereed = true %}
+{% if entry_journal_downcase == 'preprint' or entry_journal_downcase == 'under review' %}
+  {% assign entry_is_refereed = false %}
+{% endif %}
+<div class="row" data-first-author="{{ entry_is_first_or_cofirst }}" data-refereed="{{ entry_is_refereed }}">
   {% if site.enable_publication_thumbnails %}
     <div class="col col-sm-2 abbr">
       {%- if entry.abbr -%}

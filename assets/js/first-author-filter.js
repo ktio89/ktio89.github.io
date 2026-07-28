@@ -1,17 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const toggle = document.getElementById("first-author-filter");
+  const toggle = document.getElementById("first-author-filter-toggle");
   if (!toggle) return;
 
-  const isFirstOrCofirstAuthor = (entry) => {
+  const isRefereedFirstOrCofirstAuthor = (entry) => {
     const marker = entry.querySelector("[data-first-author]");
-    return !!marker && marker.dataset.firstAuthor === "true";
+    if (!marker) return false;
+    return marker.dataset.firstAuthor === "true" && marker.dataset.refereed === "true";
   };
 
   const applyFilter = () => {
-    const onlyFirstAuthor = toggle.checked;
+    const filterOn = toggle.classList.contains("active");
 
     document.querySelectorAll(".bibliography > li").forEach((entry) => {
-      entry.classList.toggle("unloaded", onlyFirstAuthor && !isFirstOrCofirstAuthor(entry));
+      entry.classList.toggle("unloaded", filterOn && !isRefereedFirstOrCofirstAuthor(entry));
     });
 
     // Hide year headers/lists that end up with no visible entries.
@@ -32,6 +33,16 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   };
 
-  toggle.addEventListener("change", applyFilter);
-  applyFilter();
+  const toggleFilter = () => {
+    toggle.classList.toggle("active");
+    applyFilter();
+  };
+
+  toggle.addEventListener("click", toggleFilter);
+  toggle.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      toggleFilter();
+    }
+  });
 });

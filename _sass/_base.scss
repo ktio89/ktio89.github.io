@@ -859,6 +859,11 @@ code {
   padding: 3px 3px;
 }
 
+#first-author-filter-toggle.active {
+  color: var(--global-bg-color);
+  background-color: var(--global-theme-color);
+}
+
 // Transitioning Themes
 html.transition,
 html.transition *,
@@ -1116,6 +1121,12 @@ swiper-container {
   --swiper-navigation-color: var(--global-theme-color);
   --swiper-pagination-color: var(--global-theme-color);
   --swiper-pagination-bullet-inactive-color: var(--global-text-color);
+}
+
+swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .ps-root {
