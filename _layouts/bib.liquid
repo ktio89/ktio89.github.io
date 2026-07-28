@@ -180,11 +180,11 @@
       {% if entry.findings %}
         <em><b>(Findings)</b></em>
       {% endif %}
-      {% if entry.note %}
-        ({{ entry.note | strip }})
-      {% endif %}
       {% if entry.oral %}
         <span style="background-color: #FBF4FB; color: #F5596E;">&nbsp;Oral Presentation&nbsp;</span>
+      {% endif %}
+      {% if entry.note %}
+        <span style="font-weight: 600;">({{ entry.note | strip }})</span>
       {% endif %}
       {% comment %} {% if entry.award %}
         <span style="background-color: #e6c0e1;">&nbsp;{{entry.award}}&nbsp;</span>
