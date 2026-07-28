@@ -1,6 +1,14 @@
 ---
 ---
-<div class="row">
+{% assign entry_is_first_or_cofirst = false %}
+{% for author in entry.author_array %}
+  {% if site.scholar.first_name contains author.first %}
+    {% if forloop.first or author.last contains '*' %}
+      {% assign entry_is_first_or_cofirst = true %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+<div class="row" data-first-author="{{ entry_is_first_or_cofirst }}">
   {% if site.enable_publication_thumbnails %}
     <div class="col col-sm-2 abbr">
       {%- if entry.abbr -%}

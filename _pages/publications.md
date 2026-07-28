@@ -32,6 +32,13 @@ images:
 <small>The asterisk (*) indicates co-first authorship.</small>
  
 
+<script src="{{ '/assets/js/first-author-filter.js' | relative_url | bust_file_cache }}"></script>
+
+<div class="form-check mb-3">
+  <input type="checkbox" id="first-author-filter" class="form-check-input">
+  <label class="form-check-label" for="first-author-filter">Only show first/co-first author papers</label>
+</div>
+
 <div class="publications">
 
 {% bibliography %}
