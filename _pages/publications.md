@@ -93,7 +93,7 @@ images:
           y: {
             beginAtZero: true,
             min: 0,
-            ticks: { stepSize: 1 },
+            ticks: { stepSize: 1, precision: 0 },
           },
         },
       },
