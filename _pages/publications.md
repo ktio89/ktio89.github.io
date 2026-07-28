@@ -83,11 +83,16 @@ images:
         responsive: true,
         maintainAspectRatio: false,
         plugins: {
-          legend: { display: true, position: "top" },
+          legend: {
+            display: true,
+            position: "top",
+            labels: { padding: 20 },
+          },
         },
         scales: {
           y: {
             beginAtZero: true,
+            min: 0,
             ticks: { stepSize: 1 },
           },
         },
@@ -98,7 +103,7 @@ images:
 
 <script src="{{ '/assets/js/first-author-filter.js' | relative_url | bust_file_cache }}"></script>
 
-<p class="mb-3">
+<p class="mb-3" style="margin-top: 1.5rem;">
   <code id="first-author-filter-toggle" role="button" tabindex="0" style="cursor: pointer; user-select: none;"><span style="font-weight: 600; color: inherit;">CLICK</span> to show published first-author papers (N = {{ site.first_author_refereed_count }})</code>
 </p>
 
