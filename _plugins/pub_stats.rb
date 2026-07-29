@@ -33,6 +33,7 @@ module PubStats
     first_names = Array(scholar["first_name"])
 
     stats = Hash.new { |h, k| h[k] = { "total" => 0, "first_author" => 0 } }
+    stats["2022"] # force 2022 onto the chart timeline even though there are no publications that year
     refereed_entries(site).each do |entry|
       year = entry[:year].to_s.strip
       next if year.empty?
