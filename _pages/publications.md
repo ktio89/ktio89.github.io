@@ -8,7 +8,7 @@ images:
     slider: true
 ---
 
-<!-- _pages/publications.md -->
+<!-- _pages/publications.md: rebuild trigger for _plugins/pub_stats.rb (2022 chart fix) -->
 
 <!-- Bibsearch Feature -->
 
