@@ -69,7 +69,7 @@ images:
             pointRadius: 4,
           },
           {
-            label: "First-/Co-first Author Papers",
+            label: "First-author Papers",
             data: firstAuthorData,
             borderColor: themeColor,
             backgroundColor: themeColor,
@@ -97,6 +97,18 @@ images:
           },
         },
       },
+      plugins: [
+        {
+          id: "legendSpacing",
+          beforeInit: function (chart) {
+            const originalFit = chart.legend.fit;
+            chart.legend.fit = function () {
+              originalFit.bind(this)();
+              this.height += 15;
+            };
+          },
+        },
+      ],
     });
   });
 </script>
