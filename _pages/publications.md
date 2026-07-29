@@ -94,6 +94,9 @@ images:
             beginAtZero: true,
             min: 0,
             ticks: { stepSize: 1, precision: 0 },
+            afterBuildTicks: (scale) => {
+              scale.ticks = scale.ticks.filter((tick) => Number.isInteger(tick.value));
+            },
           },
         },
       },
