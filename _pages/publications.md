@@ -80,7 +80,7 @@ images:
       legendEl.appendChild(item);
     });
 
-    function draw() {
+    function draw(progress) {
       const dpr = window.devicePixelRatio || 1;
       const rect = canvas.parentElement.getBoundingClientRect();
       const width = rect.width;
@@ -131,14 +131,14 @@ images:
         ctx.beginPath();
         s.data.forEach((v, i) => {
           const x = xForIndex(i);
-          const y = yForValue(v);
+          const y = yForValue(v * progress);
           if (i === 0) ctx.moveTo(x, y);
           else ctx.lineTo(x, y);
         });
         ctx.stroke();
         s.data.forEach((v, i) => {
           const x = xForIndex(i);
-          const y = yForValue(v);
+          const y = yForValue(v * progress);
           ctx.beginPath();
           ctx.arc(x, y, 4, 0, Math.PI * 2);
           ctx.fill();
@@ -146,8 +146,36 @@ images:
       });
     }
 
-    draw();
-    window.addEventListener("resize", draw);
+    function easeOutCubic(t) {
+      return 1 - Math.pow(1 - t, 3);
+    }
+
+    let currentProgress = 0;
+    let animationFrame = null;
+
+    function animateIn() {
+      const duration = 900;
+      const start = performance.now();
+      if (animationFrame) cancelAnimationFrame(animationFrame);
+      function step(now) {
+        const t = Math.min(1, (now - start) / duration);
+        currentProgress = easeOutCubic(t);
+        draw(currentProgress);
+        if (t < 1) {
+          animationFrame = requestAnimationFrame(step);
+        }
+      }
+      animationFrame = requestAnimationFrame(step);
+    }
+
+    window.addEventListener("resize", () => draw(currentProgress));
+
+    if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      currentProgress = 1;
+      draw(1);
+    } else {
+      animateIn();
+    }
   });
 </script>
 
