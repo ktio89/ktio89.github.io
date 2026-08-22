@@ -49,6 +49,7 @@ images:
     const years = Object.keys(yearlyStats);
     const totalData = years.map((year) => yearlyStats[year].total);
     const firstAuthorData = years.map((year) => yearlyStats[year].first_author);
+    const maxCount = Math.max(1, ...totalData, ...firstAuthorData);
 
     const rootStyle = getComputedStyle(document.documentElement);
     const themeColor = rootStyle.getPropertyValue("--global-theme-color").trim();
@@ -93,9 +94,14 @@ images:
           y: {
             beginAtZero: true,
             min: 0,
+            max: maxCount,
             ticks: { stepSize: 1, precision: 0 },
             afterBuildTicks: (scale) => {
-              scale.ticks = scale.ticks.filter((tick) => Number.isInteger(tick.value));
+              const ticks = [];
+              for (let value = 0; value <= maxCount; value++) {
+                ticks.push({ value });
+              }
+              scale.ticks = ticks;
             },
           },
         },
