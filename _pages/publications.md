@@ -31,6 +31,126 @@ images:
 
  
 
+<div style="max-width: 700px; margin: 1.5rem auto 0;">
+  <h4 style="text-align: center; font-size: 16px; margin-bottom: 15px;">Publication at Top Venues (C + Q1 J) by Years</h4>
+  <div id="pub-chart-legend" style="display: flex; justify-content: center; gap: 20px; margin-bottom: 10px; font-size: 13px;"></div>
+  <div style="width: 100%; height: 260px; position: relative;">
+    <canvas id="publications-by-year-chart"></canvas>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const canvas = document.getElementById("publications-by-year-chart");
+    const legendEl = document.getElementById("pub-chart-legend");
+    if (!canvas || !legendEl) return;
+
+    const yearlyStats = {{ site.publication_yearly_stats | jsonify }};
+    console.log("publication yearly stats:", yearlyStats);
+    const years = Object.keys(yearlyStats);
+    const totalData = years.map((year) => yearlyStats[year].total);
+    const firstAuthorData = years.map((year) => yearlyStats[year].first_author);
+    const maxCount = Math.max(1, ...totalData, ...firstAuthorData);
+
+    const rootStyle = getComputedStyle(document.documentElement);
+    const themeColor = rootStyle.getPropertyValue("--global-theme-color").trim() || "#3366cc";
+    const mutedColor = rootStyle.getPropertyValue("--global-text-color-light").trim() || "#888888";
+
+    // Hand-rolled canvas chart (no charting library) so the y-axis grid is
+    // drawn from an explicit list of whole numbers, 0..maxCount, and can
+    // never end up with non-integer gridlines.
+    const series = [
+      { label: "All Publications", data: totalData, color: mutedColor },
+      { label: "First-author Papers", data: firstAuthorData, color: themeColor },
+    ];
+
+    series.forEach((s) => {
+      const item = document.createElement("span");
+      item.style.display = "inline-flex";
+      item.style.alignItems = "center";
+      item.style.gap = "6px";
+      const swatch = document.createElement("span");
+      swatch.style.display = "inline-block";
+      swatch.style.width = "12px";
+      swatch.style.height = "12px";
+      swatch.style.borderRadius = "2px";
+      swatch.style.background = s.color;
+      item.appendChild(swatch);
+      item.appendChild(document.createTextNode(s.label));
+      legendEl.appendChild(item);
+    });
+
+    function draw() {
+      const dpr = window.devicePixelRatio || 1;
+      const rect = canvas.parentElement.getBoundingClientRect();
+      const width = rect.width;
+      const height = rect.height;
+      canvas.width = Math.round(width * dpr);
+      canvas.height = Math.round(height * dpr);
+      canvas.style.width = width + "px";
+      canvas.style.height = height + "px";
+
+      const ctx = canvas.getContext("2d");
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      ctx.clearRect(0, 0, width, height);
+
+      const padding = { left: 28, right: 12, top: 10, bottom: 24 };
+      const plotWidth = Math.max(0, width - padding.left - padding.right);
+      const plotHeight = Math.max(0, height - padding.top - padding.bottom);
+
+      const xForIndex = (i) =>
+        padding.left + (years.length === 1 ? plotWidth / 2 : (plotWidth * i) / (years.length - 1));
+      const yForValue = (v) => padding.top + plotHeight - (v / maxCount) * plotHeight;
+
+      ctx.strokeStyle = "rgba(128, 128, 128, 0.25)";
+      ctx.lineWidth = 1;
+      ctx.fillStyle = mutedColor;
+      ctx.font = "12px sans-serif";
+      ctx.textAlign = "right";
+      ctx.textBaseline = "middle";
+      for (let value = 0; value <= maxCount; value++) {
+        const y = Math.round(yForValue(value)) + 0.5;
+        ctx.beginPath();
+        ctx.moveTo(padding.left, y);
+        ctx.lineTo(width - padding.right, y);
+        ctx.stroke();
+        ctx.fillText(String(value), padding.left - 8, y);
+      }
+
+      ctx.fillStyle = mutedColor;
+      ctx.textAlign = "center";
+      ctx.textBaseline = "top";
+      years.forEach((year, i) => {
+        ctx.fillText(year, xForIndex(i), height - padding.bottom + 8);
+      });
+
+      series.forEach((s) => {
+        ctx.strokeStyle = s.color;
+        ctx.fillStyle = s.color;
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        s.data.forEach((v, i) => {
+          const x = xForIndex(i);
+          const y = yForValue(v);
+          if (i === 0) ctx.moveTo(x, y);
+          else ctx.lineTo(x, y);
+        });
+        ctx.stroke();
+        s.data.forEach((v, i) => {
+          const x = xForIndex(i);
+          const y = yForValue(v);
+          ctx.beginPath();
+          ctx.arc(x, y, 4, 0, Math.PI * 2);
+          ctx.fill();
+        });
+      });
+    }
+
+    draw();
+    window.addEventListener("resize", draw);
+  });
+</script>
+
 <script src="{{ '/assets/js/first-author-filter.js' | relative_url | bust_file_cache }}"></script>
 
 <p class="mb-3" style="margin-top: 1.5rem;">
