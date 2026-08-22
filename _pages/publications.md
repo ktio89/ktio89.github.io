@@ -90,19 +90,16 @@ images:
             labels: { padding: 20 },
           },
         },
+        layout: {
+          padding: { left: 24 },
+        },
         scales: {
           y: {
             beginAtZero: true,
             min: 0,
             max: maxCount,
-            ticks: { stepSize: 1, precision: 0 },
-            afterBuildTicks: (scale) => {
-              const ticks = [];
-              for (let value = 0; value <= maxCount; value++) {
-                ticks.push({ value });
-              }
-              scale.ticks = ticks;
-            },
+            grid: { display: false },
+            ticks: { display: false },
           },
         },
       },
@@ -115,6 +112,33 @@ images:
               originalFit.bind(this)();
               this.height += 15;
             };
+          },
+        },
+        {
+          // Chart.js's own tick/gridline generation can produce non-integer
+          // y-axis lines depending on data range; draw the integer grid by
+          // hand instead of relying on it.
+          id: "integerYGrid",
+          beforeDatasetsDraw: function (chart) {
+            const { ctx, chartArea, scales } = chart;
+            const y = scales.y;
+            if (!chartArea || !y) return;
+            ctx.save();
+            ctx.strokeStyle = "rgba(128, 128, 128, 0.25)";
+            ctx.lineWidth = 1;
+            ctx.fillStyle = mutedColor;
+            ctx.font = "12px sans-serif";
+            ctx.textAlign = "right";
+            ctx.textBaseline = "middle";
+            for (let value = 0; value <= maxCount; value++) {
+              const yPixel = Math.round(y.getPixelForValue(value)) + 0.5;
+              ctx.beginPath();
+              ctx.moveTo(chartArea.left, yPixel);
+              ctx.lineTo(chartArea.right, yPixel);
+              ctx.stroke();
+              ctx.fillText(String(value), chartArea.left - 8, yPixel);
+            }
+            ctx.restore();
           },
         },
       ],
