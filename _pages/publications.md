@@ -118,9 +118,9 @@ images:
       }
 
       ctx.fillStyle = mutedColor;
-      ctx.textAlign = "center";
       ctx.textBaseline = "top";
       years.forEach((year, i) => {
+        ctx.textAlign = i === 0 ? "left" : i === years.length - 1 ? "right" : "center";
         ctx.fillText(year, xForIndex(i), height - padding.bottom + 8);
       });
 
