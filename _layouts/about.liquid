@@ -63,7 +63,14 @@ layout: default
       </h3>  
       <small>* = Co-first authorship. The full publication list is</small>
       <small><a href="{{ '/publications/' | relative_url }}" style="color: #0076df">here</a></small>.
-      {% include selected_papers.liquid %}
+      <style>
+        .spotlight-papers .publications {
+          margin-top: 0.5rem;
+        }
+      </style>
+      <div class="spotlight-papers">
+        {% include selected_papers.liquid %}
+      </div>
     {% endif %}
     
     <!-- Experience -->  
