@@ -15,7 +15,7 @@ profile:
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
 ---
-[[google scholar]](https://scholar.google.com/citations?user=xF6qLHsAAAAJ&hl=en)  [[x]](https://x.com/kaiiunnong)  [linkedin] [[​ktio89(at)yonsei(dot)ac(dot)kr]](https://ktio89.github.io/)
+[[CV]](https://docs.google.com/document/d/1gNc1lVqvSrMn3FN2PYsHRh3FYSq1ltinYRysjA1_gZc/edit?usp=sharing) [[google scholar]](https://scholar.google.com/citations?user=xF6qLHsAAAAJ&hl=en) [[​ktio89(at)yonsei(dot)ac(dot)kr]](https://ktio89.github.io/)
 
 Hello. I am Kai, from Taiwan. I am a `Ph.D. candidate in AI` (advised by prof. [Jinyoung Yeo](https://jinyoungyeo.github.io/)). ​​Before AI, I'd studied mechanical engineering at National Taiwan University (B05) and Yonsei University.
 I am enthralled by the idea of building AI systems that are not merely convenient tools to replace human effort, but `reliable partners` that, together with humans, co-evolve and create greater societal value. Consequently, my research interest lies in the intersection of: 
