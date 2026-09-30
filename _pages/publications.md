@@ -32,7 +32,7 @@ images:
  
 
 <div style="max-width: 700px; margin: 1.5rem auto 0;">
-  <h4 style="text-align: center; font-size: 16px; margin-bottom: 15px;">Publication at Top Venues (C + Q1 J) by Years</h4>
+  <h4 style="text-align: center; font-size: 16px; margin-bottom: 15px;">Cumulative Publications at Top Venues (C + Q1 J) by Year</h4>
   <div id="pub-chart-legend" style="display: flex; justify-content: center; gap: 20px; margin-bottom: 10px; font-size: 13px;"></div>
   <div style="width: 100%; height: 260px; position: relative;">
     <canvas id="publications-by-year-chart"></canvas>
@@ -48,16 +48,24 @@ images:
     const yearlyStats = {{ site.publication_yearly_stats | jsonify }};
     console.log("publication yearly stats:", yearlyStats);
     const years = Object.keys(yearlyStats);
-    const totalData = years.map((year) => yearlyStats[year].total);
-    const firstAuthorData = years.map((year) => yearlyStats[year].first_author);
+    // Running totals: each year shows the count accumulated up to that year.
+    const accumulate = (key) => {
+      let sum = 0;
+      return years.map((year) => (sum += yearlyStats[year][key]));
+    };
+    const totalData = accumulate("total");
+    const firstAuthorData = accumulate("first_author");
     const maxCount = Math.max(1, ...totalData, ...firstAuthorData);
+    // Whole-number gridline step, chosen so there are at most ~6 gridlines.
+    const gridStep = Math.max(1, Math.ceil(maxCount / 6));
+    const axisMax = Math.ceil(maxCount / gridStep) * gridStep;
 
     const rootStyle = getComputedStyle(document.documentElement);
     const themeColor = rootStyle.getPropertyValue("--global-theme-color").trim() || "#3366cc";
     const mutedColor = rootStyle.getPropertyValue("--global-text-color-light").trim() || "#888888";
 
     // Hand-rolled canvas chart (no charting library) so the y-axis grid is
-    // drawn from an explicit list of whole numbers, 0..maxCount, and can
+    // drawn from an explicit list of whole numbers, 0..axisMax, and can
     // never end up with non-integer gridlines.
     const series = [
       { label: "All Publications", data: totalData, color: mutedColor },
@@ -98,9 +106,9 @@ images:
       const plotWidth = Math.max(0, width - padding.left - padding.right);
       const plotHeight = Math.max(0, height - padding.top - padding.bottom);
 
-      const xForIndex = (i) =>
-        padding.left + (years.length === 1 ? plotWidth / 2 : (plotWidth * i) / (years.length - 1));
-      const yForValue = (v) => padding.top + plotHeight - (v / maxCount) * plotHeight;
+      const bandWidth = years.length ? plotWidth / years.length : plotWidth;
+      const xForIndex = (i) => padding.left + bandWidth * (i + 0.5);
+      const yForValue = (v) => padding.top + plotHeight - (v / axisMax) * plotHeight;
 
       ctx.strokeStyle = "rgba(128, 128, 128, 0.25)";
       ctx.lineWidth = 1;
@@ -108,7 +116,7 @@ images:
       ctx.font = "12px sans-serif";
       ctx.textAlign = "right";
       ctx.textBaseline = "middle";
-      for (let value = 0; value <= maxCount; value++) {
+      for (let value = 0; value <= axisMax; value += gridStep) {
         const y = Math.round(yForValue(value)) + 0.5;
         ctx.beginPath();
         ctx.moveTo(padding.left, y);
@@ -120,28 +128,20 @@ images:
       ctx.fillStyle = mutedColor;
       ctx.textBaseline = "top";
       years.forEach((year, i) => {
-        ctx.textAlign = i === 0 ? "left" : i === years.length - 1 ? "right" : "center";
+        ctx.textAlign = "center";
         ctx.fillText(year, xForIndex(i), height - padding.bottom + 8);
       });
 
-      series.forEach((s) => {
-        ctx.strokeStyle = s.color;
+      // Grouped bars: one bar per series within each year's band.
+      const groupWidth = Math.min(bandWidth * 0.7, 56);
+      const barWidth = groupWidth / series.length;
+      const baseline = yForValue(0);
+      series.forEach((s, si) => {
         ctx.fillStyle = s.color;
-        ctx.lineWidth = 2;
-        ctx.beginPath();
         s.data.forEach((v, i) => {
-          const x = xForIndex(i);
+          const x = xForIndex(i) - groupWidth / 2 + barWidth * si;
           const y = yForValue(v * progress);
-          if (i === 0) ctx.moveTo(x, y);
-          else ctx.lineTo(x, y);
-        });
-        ctx.stroke();
-        s.data.forEach((v, i) => {
-          const x = xForIndex(i);
-          const y = yForValue(v * progress);
-          ctx.beginPath();
-          ctx.arc(x, y, 4, 0, Math.PI * 2);
-          ctx.fill();
+          ctx.fillRect(x + 1, y, barWidth - 2, baseline - y);
         });
       });
     }
