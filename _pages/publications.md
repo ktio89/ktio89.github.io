@@ -132,6 +132,20 @@ images:
         ctx.fillText(year, xForIndex(i), height - padding.bottom + 8);
       });
 
+      // Shaded area under each line (drawn first so lines/points sit on top).
+      const baseline = yForValue(0);
+      series.forEach((s) => {
+        ctx.fillStyle = s.color;
+        ctx.globalAlpha = 0.15;
+        ctx.beginPath();
+        ctx.moveTo(xForIndex(0), baseline);
+        s.data.forEach((v, i) => ctx.lineTo(xForIndex(i), yForValue(v * progress)));
+        ctx.lineTo(xForIndex(s.data.length - 1), baseline);
+        ctx.closePath();
+        ctx.fill();
+        ctx.globalAlpha = 1;
+      });
+
       series.forEach((s) => {
         ctx.strokeStyle = s.color;
         ctx.fillStyle = s.color;
