@@ -10,6 +10,13 @@ layout: default
     color: var(--global-text-color);
     font-weight: 400;
   }
+  .post .clearfix code {
+    color: var(--global-text-color);
+    background-color: #eeeeee;
+  }
+  html[data-theme="dark"] .post .clearfix code {
+    background-color: #3a3a3c;
+  }
 </style>
 <div class="post">
   <header class="post-header">
@@ -72,7 +79,7 @@ layout: default
         <br><a href="{{ '/publications/' | relative_url }}" style="color: inherit">Publication Spotlight</a>
       </h3>  
       <small>The full publication list is</small>
-      <small><a href="{{ '/publications/' | relative_url }}" style="color: #0076df">here</a></small>.
+      <small class="top-links"><a href="{{ '/publications/' | relative_url }}">here</a></small>.
       <style>
         .spotlight-papers .publications {
           margin-top: 1.25rem;

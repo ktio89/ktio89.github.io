@@ -15,7 +15,7 @@ profile:
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
 ---
-[[CV]](https://docs.google.com/document/d/1gNc1lVqvSrMn3FN2PYsHRh3FYSq1ltinYRysjA1_gZc/edit?usp=sharing) [[google scholar]](https://scholar.google.com/citations?user=xF6qLHsAAAAJ&hl=en) [[LinkedIn]](https://www.linkedin.com/in/ktio89/) [[​ktio89(at)yonsei(dot)ac(dot)kr]](https://ktio89.github.io/)
+[[CV]](https://docs.google.com/document/d/1gNc1lVqvSrMn3FN2PYsHRh3FYSq1ltinYRysjA1_gZc/edit?usp=sharing)  [[google scholar]](https://scholar.google.com/citations?user=xF6qLHsAAAAJ&hl=en)  [[LinkedIn]](https://www.linkedin.com/in/ktio89/)  [[​ktio89(at)yonsei(dot)ac(dot)kr]](https://ktio89.github.io/)
 {: .top-links}
 
 Hello. I am Kai, from Taipei, Taiwan. I am a Ph.D. candidate in AI advised by prof. Jinyoung Yeo. ​​Before AI, I'd studied mechanical engineering at both National Taiwan University (B05) and Yonsei University.
