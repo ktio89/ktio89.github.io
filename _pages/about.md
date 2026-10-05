@@ -21,7 +21,7 @@ Hello. I am Kai, from Taipei, Taiwan. I am a Ph.D. candidate in AI advised by pr
 I am enthralled by the idea of building AI systems that are not merely convenient tools to replace human effort, but `reliable partners` that, together with humans, co-evolve and create greater societal value. Consequently, my recent research interest lies in the intersection of following subjects: 
 - Things that involve dialogue[<sup>1</sup>](https://arxiv.org/abs/2406.10996)
 - Things that involve humans[<sup>2</sup>](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xF6qLHsAAAAJ&citation_for_view=xF6qLHsAAAAJ:-f6ydRqryjwC) 
-- Things that involve societal contributions (e.g., healthcare)[<sup>3</sup>](https://arxiv.org/abs/2312.07399)<sup>,</sup>[<sup>4</sup>](https://iovs.arvojournals.org/article.aspx?articleid=2793342)
+- Things that involve societal contributions (e.g., healthcare; AI Safety)[<sup>3</sup>](https://arxiv.org/abs/2312.07399)<sup>,</sup>[<sup>4</sup>](https://iovs.arvojournals.org/article.aspx?articleid=2793342)<sup>,</sup>[<sup>5</sup>](https://arxiv.org/abs/2605.22505)
 
 <code id="typewriter-text" data-text="🎉 I was nominated as the co-chair of ACL 2027's student research workshop. See you in Kyoto! // I'm currently at UC Irvine and collaborating with Prof. Daye Nam!"></code>
 <script src="{{ '/assets/js/typewriter.js' | relative_url | bust_file_cache }}"></script>
