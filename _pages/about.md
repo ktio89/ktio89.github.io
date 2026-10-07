@@ -24,5 +24,5 @@ I am enthralled by the idea of building AI systems that are not merely convenien
 - Things that involve humans[<sup>2</sup>](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xF6qLHsAAAAJ&citation_for_view=xF6qLHsAAAAJ:-f6ydRqryjwC) 
 - Things that involve societal contributions (e.g., healthcare; AI Safety)[<sup>3</sup>](https://arxiv.org/abs/2312.07399)<sup>,</sup>[<sup>4</sup>](https://arxiv.org/abs/2605.22505)
 
-<code id="typewriter-text" data-text="🎉 I was nominated as the co-chair of ACL 2027's student research workshop. See you in Kyoto! // I'm currently at UC Irvine and collaborating with Prof. Daye Nam!"></code>
+<code id="typewriter-text" data-text="🎉 I was nominated as the co-chair of ACL 2027's SRW. See you in Kyoto! // I'm now at UC Irvine and working with Prof. Daye Nam!"></code>
 <script src="{{ '/assets/js/typewriter.js' | relative_url | bust_file_cache }}"></script>
