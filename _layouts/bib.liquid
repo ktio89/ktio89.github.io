@@ -248,9 +248,9 @@
       {% endcomment %}
       {% if entry.pdf %}
         {% if entry.pdf contains '://' %}
-          <a href="{{ entry.pdf }}">[PDF]</a>
+          <a href="{{ entry.pdf }}" style="color: #828282;">[PDF]</a>
         {% else %}
-          <a href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}">PDF</a>
+          <a href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}" style="color: #828282;">PDF</a>
         {% endif %}
       {% endif %}
       {% if entry.presentation %}

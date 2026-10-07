@@ -859,13 +859,16 @@ code {
   padding: 3px 3px;
 }
 
-// "New" badge on publications: same grey style as the homepage typewriter.
-code.new-badge {
+// "New" badge and first-author filter toggle on publications: same grey
+// style as the homepage typewriter.
+code.new-badge,
+#first-author-filter-toggle {
   color: var(--global-text-color);
   background-color: #eeeeee;
 }
 
-html[data-theme="dark"] code.new-badge {
+html[data-theme="dark"] code.new-badge,
+html[data-theme="dark"] #first-author-filter-toggle:not(.active) {
   background-color: #3a3a3c;
 }
 
