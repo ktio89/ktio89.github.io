@@ -859,6 +859,16 @@ code {
   padding: 3px 3px;
 }
 
+// "New" badge on publications: same grey style as the homepage typewriter.
+code.new-badge {
+  color: var(--global-text-color);
+  background-color: #eeeeee;
+}
+
+html[data-theme="dark"] code.new-badge {
+  background-color: #3a3a3c;
+}
+
 #first-author-filter-toggle.active {
   color: var(--global-bg-color);
   background-color: var(--global-theme-color);
