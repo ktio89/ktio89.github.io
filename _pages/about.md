@@ -24,5 +24,5 @@ I am enthralled by the idea of building AI systems that are not merely convenien
 - Things that involve dialogue[<sup>2</sup>](https://arxiv.org/abs/2406.10996)
 - Things that involve societal contributions (e.g., healthcare; AI Safety)[<sup>3</sup>](https://arxiv.org/abs/2312.07399)<sup>,</sup>[<sup>4</sup>](https://arxiv.org/abs/2605.22505)
 
-<code id="typewriter-text" data-text="🎉 I was nominated as the co-chair of ACL 2027's SRW. See you in Kyoto! // I'm now at UC Irvine and working with Prof. Daye Nam!"></code>
+<code id="typewriter-text" data-text="🎉 I will be serving as the co-chair of ACL 2027's SRW. See you in Kyoto! // I'm now at UC Irvine with Prof. Daye Nam!"></code>
 <script src="{{ '/assets/js/typewriter.js' | relative_url | bust_file_cache }}"></script>
