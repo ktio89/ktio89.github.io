@@ -194,7 +194,7 @@
         <em><b>(Findings)</b></em>
       {% endif %}
       {% if entry.oral %}
-        <span style="background-color: #FBF4FB; color: #F5596E; font-weight: 450;">&nbsp;Oral Presentation&nbsp;</span>
+        <code class="new-badge">🎉 Oral Presentation</code>
       {% endif %}
       {% if entry.note %}
         <span style="font-weight: 450;">({{ entry.note | strip }})</span>
@@ -208,12 +208,9 @@
         {% assign award_name = award_parts[0] | strip %}
         {% assign award_url = award_parts[1] | strip %}
         {% if award_url != "" %}
-              <a href="{{ award_url }}" target="_blank"
-              style="background-color: #FBF4FB; text-decoration: none; color: #F5596E; font-weight: 450;">
-              &nbsp;{{ award_name }}&nbsp;
-              </a>
+              <a href="{{ award_url }}" target="_blank" style="text-decoration: none;"><code class="new-badge">{{ award_name }}</code></a>
         {% else %}
-              <span style="background-color: #FBF4FB; color: #F5596E; font-weight: 450;">&nbsp;{{ award_name }}&nbsp;</span>
+              <code class="new-badge">{{ award_name }}</code>
         {% endif %}
       {% endif %}
     </div>
