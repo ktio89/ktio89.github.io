@@ -291,17 +291,17 @@ ul.task-list input[type="checkbox"] {
     color: var(--global-text-color);
 
     &:hover {
-      color: var(--global-hover-color);
+      color: var(--global-text-color);
     }
   }
 
   .navbar-nav .nav-item.active > .nav-link {
     background-color: inherit;
     font-weight: bolder;
-    color: var(--global-theme-color);
+    color: var(--global-text-color);
 
     &:hover {
-      color: var(--global-hover-color);
+      color: var(--global-text-color);
     }
   }
 
@@ -934,7 +934,7 @@ progress {
   background-color: transparent;
 
   /* Progress bar value for IE10  */
-  color: var(--global-theme-color);
+  color: var(--global-text-color);
 }
 
 progress::-webkit-progress-bar {
@@ -942,11 +942,11 @@ progress::-webkit-progress-bar {
 }
 
 progress::-webkit-progress-value {
-  background-color: var(--global-theme-color);
+  background-color: var(--global-text-color);
 }
 
 progress::-moz-progress-bar {
-  background-color: var(--global-theme-color);
+  background-color: var(--global-text-color);
 }
 
 .progress-container {
@@ -960,7 +960,7 @@ progress::-moz-progress-bar {
 }
 
 .progress-bar {
-  background-color: var(--global-theme-color);
+  background-color: var(--global-text-color);
   width: 0%;
   display: block;
   height: inherit;
