@@ -61,7 +61,7 @@ images:
     const axisMax = Math.ceil(maxCount / gridStep) * gridStep;
 
     const rootStyle = getComputedStyle(document.documentElement);
-    const themeColor = rootStyle.getPropertyValue("--global-theme-color").trim() || "#3366cc";
+    const themeColor = rootStyle.getPropertyValue("--global-theme-color").trim() || "#6e56cf";
     const mutedColor = rootStyle.getPropertyValue("--global-text-color-light").trim() || "#888888";
 
     // Hand-rolled canvas chart (no charting library) so the y-axis grid is
